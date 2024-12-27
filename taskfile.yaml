@@ -1,0 +1,14 @@
+---
+version: "3"
+
+vars:
+  USER: yc-user
+  SSH_KEY_PATH: ~/.ssh/dev-hosts
+  PROJECT_PATH: ~/Code/airflow-dags-notifications
+  SERVER_ADDR: leonidgrishenkov.com
+
+tasks:
+  sync:
+    desc: Sync files with the server.
+    cmds:
+      - rsync -az -e "ssh -i {{ .SSH_KEY_PATH }}" --progress {{ .PROJECT_PATH }} {{ .USER }}@{{ .SERVER_ADDR }}:/home/{{ .USER }}/
