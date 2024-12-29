@@ -11,4 +11,4 @@ tasks:
   sync:
     desc: Sync files with the server.
     cmds:
-      - rsync -az -e "ssh -i {{ .SSH_KEY_PATH }}" --progress {{ .PROJECT_PATH }} {{ .USER }}@{{ .SERVER_ADDR }}:/home/{{ .USER }}/
+      - rsync -az -e "ssh -i {{ .SSH_KEY_PATH }}" --progress --delete --checksum --exclude='airflow/logs' {{ .PROJECT_PATH }} {{ .USER }}@{{ .SERVER_ADDR }}:/home/{{ .USER }}/
