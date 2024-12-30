@@ -114,7 +114,7 @@ def on_dag_run_success(dag_run: DagRun, msg: str):
     """
     TELEGRAM_CHAT_ID = 196255068
 
-    # We will send message only if DAG was triggered manually
+    # NOTE: We will send message only if DAG was triggered manually
     if dag_run.run_type == DagRunType.MANUAL:
 
         airflow_instance = socket.gethostname()
