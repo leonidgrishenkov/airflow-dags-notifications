@@ -36,7 +36,7 @@ To stop containers type:
 docker compose -f ./docker/compose.yaml down
 ```
 
-# Adding plugins
+# Add plugins
 
 Add plugins into the `./airflow/plugins` forlder.
 
