@@ -4,7 +4,7 @@ version: "3"
 vars:
   USER: yc-user
   SSH_KEY_PATH: ~/.ssh/dev-hosts
-  PROJECT_PATH: ~/Code/airflow-dags-notifications
+  PROJECT_PATH: ~/Code/airflow-dags-state-notifications-plugin
   SERVER_ADDR: leonidgrishenkov.com
 
 tasks:
